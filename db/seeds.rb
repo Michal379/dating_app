@@ -23,3 +23,25 @@ require 'faker'
       activity: Faker::Lorem.words(number: 2).join(", ")
     )
   end
+
+  #profiles
+
+  10.times do
+  user = User.all.sample # Assuming you have a User model with associated profiles
+  profile = user.profile
+  profile&.destroy if profile # Remove existing profile if it exists
+
+  user.create_profile!(
+    about_me: Faker::Lorem.paragraph,
+    interests: Faker::Lorem.words(number: 5).join(", "),
+    occupation: Faker::Job.title,
+    education: Faker::Educator.degree,
+    height: Faker::Number.decimal(l_digits: 2),
+    body_type: Faker::Lorem.word,
+    religion: Faker::Lorem.word,
+    smoking: Faker::Boolean.boolean,
+    drinking: Faker::Boolean.boolean
+  )
+end
+
+  
