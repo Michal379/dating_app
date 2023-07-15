@@ -44,4 +44,16 @@ require 'faker'
   )
 end
 
+#matches
+10.times do
+    user = User.all.sample # Assuming you have a User model with associated matches
+  
+    Match.create!(
+      user: user,
+      status: Faker::Lorem.word,
+      match_score: Faker::Number.decimal(l_digits: 2),
+      matched_at: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now)
+    )
+  end
+
   
