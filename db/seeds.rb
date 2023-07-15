@@ -56,4 +56,17 @@ end
     )
   end
 
+  #chats
+
+  10.times do
+    user = User.all.sample # Assuming you have a User model with associated chats
+  
+    Chat.create!(
+      user: user,
+      message: Faker::Lorem.sentence,
+      read: Faker::Boolean.boolean,
+      sent_at: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now)
+    )
+  end
+
   
