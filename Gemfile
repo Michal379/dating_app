@@ -70,4 +70,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem 'bcrypt', '~> 3.1.7'
+  gem 'faker'
 end
