@@ -1,6 +1,14 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 const User = () => {
+    const [users, setUsers] = useState('')
+    
+    
+    useEffect(() => {
+        fetch("/users")
+        .then ((r) => r.json())
+        .then((data) =>setUsers(data))
+    })
   return (
     <div>User</div>
   )
