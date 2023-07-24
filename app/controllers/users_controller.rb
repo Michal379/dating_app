@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       end
     end
   
-    def update
+    def update9
       user = find_user
       if user.update(user_params)
         render json: user.to_json(except: [:password_digest, :created_at, :updated_at])

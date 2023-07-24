@@ -71,4 +71,5 @@ group :test do
   gem "webdrivers"
   gem 'bcrypt', '~> 3.1.7'
   gem 'faker'
+  gem 'active_model_serializers'
 end
