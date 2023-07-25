@@ -98,7 +98,7 @@ function SignUpForm({ onLogin }) {
   );
 }
 
-export default SignUpForm;
+export default SignInForm;
 
 
 
