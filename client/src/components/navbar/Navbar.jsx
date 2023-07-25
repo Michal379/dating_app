@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import '../../App.css';
 
 const Navbar = () => {
   const location = useLocation();
@@ -17,33 +16,33 @@ const Navbar = () => {
               </Link>
             </li>
             <li className={`nav-item ${location.pathname === '/hotels' ? 'active' : ''}`}>
-              <Link to="/hotels" className="navButton">
-                Hotels
+              <Link to="/online" className="navButton">
+                Online
               </Link>
             </li>
             <li className={`nav-item ${location.pathname === '/signup' ? 'active' : ''}`}>
-              <Link to="/signup" className="navButton">
-                Sign up
+              <Link to="/matches" className="navButton">
+              Matches
               </Link>
             </li>
             <li className={`nav-item ${location.pathname === '/login' ? 'active' : ''}`}>
-              <Link to="/login" className="navButton">
-                Login
+              <Link to="/search" className="navButton">
+               Search
               </Link>
             </li>
             <li className={`nav-item ${location.pathname === '/BookingDetailsPage' ? 'active' : ''}`}>
-            <Link to="/booking-details" className="navButton">
-              Details
+            <Link to="/messages" className="navButton">
+              Messages
               </Link>
             </li>
             <li className={`nav-item ${location.pathname === '/booked' ? 'active' : ''}`}>
-              <Link to="/booked" className="navButton">
-                Rooms
+              <Link to="/activity" className="navButton">
+                Activity
               </Link>
             </li>
             <li className={`nav-item ${location.pathname === '/logout' ? 'active' : ''}`}>
-              <Link to="/logout" className="navButton">
-                Log out
+              <Link to="/sign up" className="navButton">
+                Sign Up
               </Link>
             </li>
             <li className={`nav-item ${location.pathname === '/admin' ? 'active' : ''}`}>
