@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Error, Input, FormField, Label } from "../styles";
+import './Login.css';
 
 function LoginForm({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -28,36 +28,36 @@ function LoginForm({ onLogin }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <FormField>
-        <Label htmlFor="name">Username</Label>
-        <Input
+      <div>
+        <label htmlFor="name">Username</label>
+        <input
           type="text"
           id="name"
           autoComplete="off"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-      </FormField>
-      <FormField>
-        <Label htmlFor="password">Password</Label>
-        <Input
+      </div>
+      <div>
+        <label htmlFor="password">Password</label>
+        <input
           type="password"
           id="password"
           autoComplete="current-password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-      </FormField>
-      <FormField>
-        <Button variant="fill" color="primary" type="submit">
+      </div>
+      <div>
+        <button type="submit">
           {isLoading ? "Loading..." : "Login"}
-        </Button>
-      </FormField>
-      <FormField>
+        </button>
+      </div>
+      <div>
         {errors.map((err) => (
-          <Error key={err}>{err}</Error>
+          <div key={err}>{err}</div>
         ))}
-      </FormField>
+      </div>
     </form>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Signin.css";
 
 function SignUpForm({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -58,10 +59,10 @@ function SignUpForm({ onLogin }) {
         />
       </div>
       <div>
-        <label htmlFor="password">Password Confirmation</label>
+        <label htmlFor="passwordConfirmation">Password Confirmation</label>
         <input
           type="password"
-          id="password_confirmation"
+          id="passwordConfirmation"
           value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)}
           autoComplete="current-password"
@@ -98,6 +99,7 @@ function SignUpForm({ onLogin }) {
 }
 
 export default SignUpForm;
+
 
 
 
