@@ -6,7 +6,7 @@ import Home from './components/home/Home';
 import Signin from './components/signin/Signin';
 
 function App() {
-  const [user, setUser] = useState(null); // Define the setUser function
+  const [user, setUser] = useState(null);
   const [message, setMessage] = useState('');
   const [userDetails, setUserDetails] = useState(null);
 
@@ -24,7 +24,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar user={user} handleLogout={handleLogout} />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<Signin onSignin={handleSignin} />} />

@@ -1,3 +1,57 @@
-navbar{
-    color: rgb(218, 75, 80);
+.navbar {
+  background-color: rgb(218, 75, 80);
+  padding: 10px;
+}
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navItems {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.navButton {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.active {
+  background-color: white;
+  color: rgb(218, 75, 80);
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+  .navbarContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navItems {
+    margin-top: 20px;
+  }
+
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
