@@ -1,38 +1,28 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
-import Signin from './components/signin/Signin';
+import Matches from './components/matches/Matches';
+import Search from './components/search/Search';
+import Messages from './components/messages/Messages';
+import Activity from './components/activity/Activity';
+import Footer from './components/footer/Footer';
 
-function App() {
-  const [user, setUser] = useState(null);
-  const [message, setMessage] = useState('');
-  const [userDetails, setUserDetails] = useState(null);
-
-  const handleSignup = (user) => {
-    setUserDetails(user);
-  };
-
-  const handleLogout = () => {
-    setUser(null);
-  };
-
-  const handleSignin = (user) => {
-    // Add your logic for handling the user signin here
-  };
-
+const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<Signin onSignin={handleSignin} />} />
+        <Route path="/online" element={<div>Online</div>} />
+        <Route path="/matches" element={<Matches />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/messages" element={<Messages />} />
+        <Route path="/activity" element={<Activity />} />
       </Routes>
       <Footer />
-      {message && <div className="message">{message}</div>}
-    </BrowserRouter>
+    </Router>
   );
-}
+};
 
 export default App;

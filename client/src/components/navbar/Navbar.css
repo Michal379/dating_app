@@ -3,6 +3,33 @@
   padding: 10px;
 }
 
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  margin-top: 10px;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: rgb(218, 75, 80);
+  background-color: white;
+  border-radius: 4px;
+}
+
+/* 
 .navbarContainer {
   display: flex;
   align-items: center;
@@ -40,7 +67,7 @@
 }
 
 /* Additional styles for responsiveness */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .navbarContainer {
     flex-direction: column;
     align-items: center;
@@ -53,5 +80,5 @@
   .nav-item {
     margin-right: 0;
     margin-bottom: 10px;
-  }
-}
+  } 
+} */
